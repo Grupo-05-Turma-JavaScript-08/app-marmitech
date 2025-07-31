@@ -39,6 +39,7 @@ Projeto desenvolvido por
 Felipe Alves
 Gabriel Martins
 Larissa Ruiz
-Mateus Pereira
+Matheus Pereira
 Micheli Martins
 Viviane Santos
+Ewertton Gonçalves
