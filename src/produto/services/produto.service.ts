@@ -39,6 +39,8 @@ export class ProdutoService {
     }
 
     async update(produto: Produto): Promise<Produto> {
+        if (!produto.id)
+            throw new HttpException('Id de produto precisa ser informado!', HttpStatus.NOT_FOUND);
         await this.findById(produto.id)
         return await this.produtoRepository.save(produto);
     }
