@@ -1,5 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ProdutoModule } from './produto/produto.module';
+import { Produto } from './produto/entities/produto.entity';
 
 
 @Module({
@@ -11,10 +13,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'root',
       password: 'root',
       database: 'db_marmitech',
-      entities: [],
+      entities: [Produto],
       synchronize: true,
       logging: true
-    })],
+    }), 
+    ProdutoModule
+  ],  
   controllers: [],
   providers: [],
 })
