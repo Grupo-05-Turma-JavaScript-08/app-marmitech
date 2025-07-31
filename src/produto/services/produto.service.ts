@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Produto } from "../entities/produto.entity";
-import { ILike, Repository } from "typeorm";
+import { DeleteResult, ILike, Repository } from "typeorm";
 
 
 
@@ -32,11 +32,24 @@ export class ProdutoService {
 
     async findAllByNome(nome: string): Promise<Produto[]> {
         return await this.produtoRepository.find({
-            where:{
-            nome: ILike(`% ${nome}%`)
-        }
-})
-}
+            where: {
+                nome: ILike(`%${nome}%`)
+            }
+        })
+    }
 
+    async update(produto: Produto): Promise<Produto> {
+        return await this.produtoRepository.save(produto);
+    }
+
+    async create(produto: Produto): Promise<Produto> {
+        return await this.produtoRepository.save(produto);
+    }
+
+    async delete(id: number): Promise<DeleteResult> {
+        await this.findById(id)
+        return await this.produtoRepository.delete(id)
+
+    }
 
 }
