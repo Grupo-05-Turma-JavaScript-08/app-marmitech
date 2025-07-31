@@ -1,4 +1,4 @@
-Backend do Marmitech
+# Backend do Marmitech
 Este projeto consiste em um backend para o sistema de delivery de marmitas Marmitech, focado na gestão de produtos. A API foi desenvolvida seguindo o padrão RESTful e implementa um CRUD completo para a entidade Produto.
 
 ---
@@ -36,10 +36,10 @@ A entidade Produto representa um item do catálogo e possui os seguintes atribut
 ---
 Projeto desenvolvido por 
 
-Felipe Alves
-Gabriel Martins
-Larissa Ruiz
-Matheus Pereira
-Micheli Martins
-Viviane Santos
-Ewertton Gonçalves
+* Felipe Alves  
+* Gabriel Martins
+* Larissa Ruiz
+* Matheus Pereira
+* Micheli Martins
+* Viviane Santos
+* Ewertton Gonçalves
